@@ -10,8 +10,8 @@ export const navigation = [
     path: '/creatures'
   },
   {
-    text: 'Tasks',
+    text: 'Planets',
     icon: 'globe',
-    path: '/tasks'
+    path: '/planets'
   }
 ];

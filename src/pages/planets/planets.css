@@ -1,0 +1,14 @@
+.dx-datagrid .dx-data-row:hover,
+.dx-datagrid .dx-row-alt:hover {
+  background-color: #FF7247;
+  cursor: pointer;
+  color: #8bc34a;
+}
+.dx-datagrid .dx-data-row:hover td,
+.dx-datagrid .dx-row-alt:hover td {
+  color: #ffffff !important;
+  border: 1px solid #FF7247 !important;
+  background-color: #FF7247;
+}
+
+/*# sourceMappingURL=planets.css.map */

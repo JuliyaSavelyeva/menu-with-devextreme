@@ -4,8 +4,8 @@ import './home.scss';
 export const HomePage = () => {
   return (
     <React.Fragment>
-      <h2 className={'content-block'}>Home</h2>
-      <div className={'content-block'}>
+      <h2 className={'title'}>Home</h2>
+      <div>
         <div className={'dx-card responsive-paddings'}>
           <div className={'logos-container'}>
             <svg className={'devextreme-logo'} viewBox={'0 0 200 34'} fill={'none'}

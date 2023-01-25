@@ -3,7 +3,6 @@ import type { Handle } from '../types';
 
 export const useScreenSize = () => {
   const [screenSize, setScreenSize] = useState(getScreenSize());
-  console.log(screenSize);
   const onSizeChanged = useCallback(() => {
     setScreenSize(getScreenSize());
   }, []);

@@ -16,18 +16,8 @@ export interface SideNavigationMenuProps {
   onMenuReady: (e: EventInfo<dxTreeView>) => void;
 }
 
-export interface User {
-  email: string;
-  avatarUrl: string;
-}
-
 export interface SideNavToolbarProps {
   title: string;
-}
-
-export interface SingleCardProps {
-  title?: string;
-  description?: string;
 }
 
 export type Handle = () => void;
@@ -43,4 +33,21 @@ export type NavigationContextType = {
 
 export type ValidationType = {
   value: string;
+}
+
+export type PlanetType = {
+  name: string;
+  diameter: string;
+  rotation_period: string;
+  orbital_period: string;
+  gravity: string;
+  population: string;
+  climate: string;
+  terrain: string;
+  surface_water: string;
+  residents: string[];
+  films: string[];
+  url: string;
+  created: string;
+  edited: string;
 }

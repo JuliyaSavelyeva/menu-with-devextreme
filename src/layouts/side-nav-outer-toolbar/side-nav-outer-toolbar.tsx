@@ -52,8 +52,8 @@ export const SideNavToolbar = ({ title, children }: React.PropsWithChildren<Side
     return menuStatus === MenuStatus.Closed;
   }, [isLarge]);
 
-  const onNavigationChanged = useCallback(({ itemData, event, node }: ItemClickEvent) => {
-    if (menuStatus === MenuStatus.Closed || !itemData?.path || node?.selected) {
+  const onNavigationChanged = useCallback(({ itemData, event }: ItemClickEvent) => {
+    if (menuStatus === MenuStatus.Closed || !itemData?.path) {
       event?.preventDefault();
       return;
     }

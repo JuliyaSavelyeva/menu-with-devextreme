@@ -23,7 +23,14 @@
   min-height: 0;
 }
 .app .content-block {
-  margin: 20px 40px 40px 40px;
+  margin: 40px;
+}
+.app .title {
+  margin: 0 0 20px 0;
+}
+
+.dx-datagrid {
+  padding: 20px;
 }
 
 .side-nav-outer-toolbar .dx-drawer {
@@ -125,6 +132,10 @@ html, body {
   color: inherit;
 }
 
+.dx-swatch-additional .dx-widget {
+  background-color: #363640;
+}
+
 .dx-drawer-overlap.pre-init-blink-fix .dx-drawer-content {
   padding-left: 60px;
 }
@@ -140,4 +151,4 @@ html, body {
   width: 60px !important;
 }
 
-/*# sourceMappingURL=SideNavigationMenu.css.map */
+/*# sourceMappingURL=sideNavigationMenu.css.map */

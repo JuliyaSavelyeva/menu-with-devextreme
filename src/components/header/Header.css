@@ -23,7 +23,14 @@
   min-height: 0;
 }
 .app .content-block {
-  margin: 20px 40px 40px 40px;
+  margin: 40px;
+}
+.app .title {
+  margin: 0 0 20px 0;
+}
+
+.dx-datagrid {
+  padding: 20px;
 }
 
 .side-nav-outer-toolbar .dx-drawer {

@@ -1,10 +1,14 @@
-import { HomePage, TasksPage, ProfilePage } from './pages';
+import { HomePage, PlanetsPage, ProfilePage, SinglePlanetPage } from './pages';
 import { withNavigationWatcher } from './contexts/navigation';
 
 const routes = [
   {
-    path: '/tasks',
-    element: TasksPage
+    path: '/planets',
+    element: PlanetsPage
+  },
+  {
+    path: '/planets/:id',
+    element: SinglePlanetPage
   },
   {
     path: '/creatures',

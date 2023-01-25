@@ -1,0 +1,16 @@
+@import "../../themes/generated/variables.base";
+
+.dx-datagrid {
+  .dx-data-row:hover,
+  .dx-row-alt:hover {
+    background-color: $light-base-accent;
+    cursor: pointer;
+    color: #8bc34a;
+
+    td {
+      color: $base-bg !important;
+      border: 1px solid $light-base-accent !important;
+      background-color: $light-base-accent;
+    }
+  }
+}
