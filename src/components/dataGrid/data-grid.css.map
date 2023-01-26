@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["data-grid.scss","../../themes/generated/variables.base.scss"],"names":[],"mappings":"AAGE;AAAA;EAEE,kBCJgB;EDKhB;EACA;;AAEA;AAAA;EACE;EACA;EACA,kBCXc","file":"data-grid.css"}
+{"version":3,"sourceRoot":"","sources":["data-grid.scss","../../themes/generated/variables.scss"],"names":[],"mappings":"AAGE;AAAA;EAEE,kBCJgB;EDKhB;EACA;;AAEA;AAAA;EACE;EACA;EACA,kBCXc","file":"data-grid.css"}
