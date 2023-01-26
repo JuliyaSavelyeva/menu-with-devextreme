@@ -1,5 +1,3 @@
-# in work...
-
 # menu-with-devexpress
 
 ### [Netlify link]()
