@@ -7,6 +7,8 @@
 }
 .form-avatar img {
   height: 130px;
+  width: 130px;
+  border-radius: 50%;
 }
 
 .second-group {
@@ -15,4 +17,4 @@
   padding: 10px 20px;
 }
 
-/*# sourceMappingURL=singlePlanet.css.map */
+/*# sourceMappingURL=pages.css.map */

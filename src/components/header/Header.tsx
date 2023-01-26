@@ -2,7 +2,7 @@ import React from 'react';
 import Toolbar, { Item } from 'devextreme-react/toolbar';
 import Button from 'devextreme-react/button';
 import './Header.scss';
-import type { HeaderProps } from '../../types';
+import type { HeaderProps } from '../../types/headerType';
 
 export const Header = ({ menuToggleEnabled, title, toggleMenu }: HeaderProps) => {
   return (

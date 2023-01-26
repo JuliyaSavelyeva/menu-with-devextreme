@@ -1,5 +1,6 @@
-import { HomePage, PlanetsPage, ProfilePage, SinglePlanetPage } from './pages';
+import { HomePage, PlanetsPage, CreaturesPage, SinglePlanetPage } from './pages';
 import { withNavigationWatcher } from './contexts/navigation';
+import { SingleCreaturePage } from './pages/singleCreature/SingleCreaturePage';
 
 const routes = [
   {
@@ -12,7 +13,11 @@ const routes = [
   },
   {
     path: '/creatures',
-    element: ProfilePage
+    element: CreaturesPage
+  },
+  {
+    path: '/creatures/:id',
+    element: SingleCreaturePage
   },
   {
     path: '/home',

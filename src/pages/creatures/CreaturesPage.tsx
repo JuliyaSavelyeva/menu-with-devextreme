@@ -1,46 +1,45 @@
 import React, { useCallback, useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
-import {
-  getAllPlanets,
-  selectPlanets
-} from '../../features/planets/planetsSlice';
+import { RowDblClickEvent } from 'devextreme/ui/data_grid';
 import LoadPanel from 'devextreme-react/load-panel';
 import { DataGridComponent, Error } from '../../components';
-import { RowDblClickEvent } from 'devextreme/ui/data_grid';
-import { useNavigate } from 'react-router';
 import { GridDataType } from '../../types/contentType';
+import { getAllCreatures, selectCreatures } from '../../features/creatures/creaturesSlice';
+import { useNavigate } from 'react-router';
 
-export const PlanetsPage = () => {
-  const { status, planetsData } = useAppSelector(selectPlanets);
+export const CreaturesPage = () => {
+  const { status, creaturesData } = useAppSelector(selectCreatures);
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
   useEffect(() => {
-    dispatch(getAllPlanets());
+    dispatch(getAllCreatures());
   }, [dispatch]);
+
 
   const handleRowDblClick = useCallback(
     ({ data }: RowDblClickEvent) => {
       const url = data.url.split('/');
-      navigate(`/planets/${url[url.length - 2]}`);
+      navigate(`/creatures/${url[url.length - 2]}`);
     },
     []
   );
 
   return (
     <React.Fragment>
-      <h2 className={'title'}>Planets</h2>
+      <h2 className={'title'}>Creatures</h2>
 
       {status === 'loading' && <LoadPanel visible={true} />}
       {status === 'failed' && <Error />}
 
-      {status === 'success' && planetsData && (
+      {status === 'success' && creaturesData && (
         <DataGridComponent
-          dataType={GridDataType.PlanetsData}
-          data={planetsData}
+          dataType={GridDataType.CreaturesData}
+          data={creaturesData}
           handleRowDblClick={handleRowDblClick}
         />
       )}
     </React.Fragment>
   );
 };
+

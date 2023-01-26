@@ -4,11 +4,11 @@ import { navigation } from '../../app-navigation';
 import { useNavigation } from '../../contexts/navigation';
 import { useScreenSize } from '../../utils/media-query';
 import './sideNavigationMenu.scss';
-import type { SideNavigationMenuProps } from '../../types';
+import type { SideNavigationMenuProps } from '../../types/navigationType';
 
 import * as events from 'devextreme/events';
 
-export default function SideNavigationMenu(props: React.PropsWithChildren<SideNavigationMenuProps>) {
+export const SideNavigationMenu = (props: React.PropsWithChildren<SideNavigationMenuProps>) => {
   const {
     children,
     selectedItemChanged,
@@ -83,4 +83,4 @@ export default function SideNavigationMenu(props: React.PropsWithChildren<SideNa
       </div>
     </div>
   );
-}
+};

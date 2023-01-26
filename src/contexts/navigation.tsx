@@ -1,5 +1,5 @@
 import React, { useState, createContext, useContext, useEffect } from 'react';
-import type { NavigationContextType } from '../types';
+import type { NavigationContextType } from '../types/navigationType';
 
 const NavigationContext = createContext<NavigationContextType>({} as NavigationContextType);
 const useNavigation = () => useContext(NavigationContext);
@@ -16,7 +16,7 @@ function NavigationProvider(props: React.PropsWithChildren<unknown>) {
 }
 
 function withNavigationWatcher(Component: React.ElementType, path: string) {
-  const WrappedComponent = function (props: Record<string, unknown>) {
+  const WrappedComponent = function(props: Record<string, unknown>) {
     const { setNavigationData } = useNavigation();
 
     useEffect(() => {
@@ -24,7 +24,7 @@ function withNavigationWatcher(Component: React.ElementType, path: string) {
     }, [path, setNavigationData]);
 
     return <Component {...props} />;
-  }
+  };
   return <WrappedComponent />;
 }
 
@@ -32,4 +32,4 @@ export {
   NavigationProvider,
   useNavigation,
   withNavigationWatcher
-}
+};

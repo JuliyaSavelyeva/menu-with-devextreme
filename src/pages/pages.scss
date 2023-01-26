@@ -4,9 +4,12 @@
   margin-right: 10px;
   border: 1px solid #d2d3d5;
   border-radius: 50%;
-}
-.form-avatar img {
-  height: 130px;
+
+  img {
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+  }
 }
 
 .second-group {
@@ -14,5 +17,3 @@
   background-color: rgba(191, 191, 191, 0.15);
   padding: 10px 20px;
 }
-
-/*# sourceMappingURL=singlePlanet.css.map */

@@ -9,7 +9,7 @@ import { Template } from 'devextreme-react/core/template';
 import { useMenuPatch } from '../../utils/patches';
 import { ClickEvent } from 'devextreme/ui/button';
 import { ItemClickEvent } from 'devextreme/ui/tree_view';
-import type { SideNavToolbarProps } from '../../types';
+import type { SideNavToolbarProps } from '../../types/navigationType';
 
 const MenuStatus = {
   Closed: 1,

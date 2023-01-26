@@ -1,10 +1,10 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../../app/store';
 import { getPlanet, getPlanets } from './planetsAPI';
-import { PlanetType } from '../../types';
+import { PlanetType } from '../../types/contentType';
 
 export interface PlanetsState {
-  planetsData: PlanetType[] | null;
+  planetsData: [PlanetType] | null;
   planet: PlanetType | null;
   status: 'success' | 'loading' | 'failed';
 }
@@ -23,7 +23,7 @@ export const getAllPlanets = createAsyncThunk(
   }
 );
 
-export const getSingleArticle = createAsyncThunk(
+export const getSinglePlanet = createAsyncThunk(
   'planets/getPlanet',
   async (id: string) => {
     const response = await getPlanet(id);
@@ -48,14 +48,14 @@ export const planetsReducer = createSlice({
         state.status = 'failed';
       });
     builder
-      .addCase(getSingleArticle.pending, (state) => {
+      .addCase(getSinglePlanet.pending, (state) => {
         state.status = 'loading';
       })
-      .addCase(getSingleArticle.fulfilled, (state, action) => {
+      .addCase(getSinglePlanet.fulfilled, (state, action) => {
         state.status = 'success';
         state.planet = action.payload;
       })
-      .addCase(getSingleArticle.rejected, (state) => {
+      .addCase(getSinglePlanet.rejected, (state) => {
         state.status = 'failed';
       });
   }
