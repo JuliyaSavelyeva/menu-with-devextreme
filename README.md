@@ -1,6 +1,6 @@
 # menu-with-devexpress
 
-### [Netlify link]()
+### [Netlify link](https://lustrous-churros-ee2491.netlify.app/#/home)
 
 ### The tech stack is:
 
